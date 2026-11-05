@@ -40,11 +40,22 @@ cd shared-brain
 ./install.sh              # brain goes to ~/brain, or pass another folder
 ```
 
-The installer copies the example brain, the hook and the skill, and never overwrites a file that is already there.
-It does not touch your Claude Code settings. It prints the two lines you add yourself:
-an `@` import in `~/.claude/CLAUDE.md` and a `SessionStart` hook in `~/.claude/settings.json`.
+The installer copies an empty starter brain, the hook and the `/brain` skill, and never overwrites a file that is
+already there. Then it shows the two changes Claude Code needs and asks before making them:
+an `@` import in `~/.claude/CLAUDE.md` and a `SessionStart` hook merged into `~/.claude/settings.json`.
+Both files are backed up first. Say no, and it prints the lines to add by hand instead.
 
-Then make it yours: describe your products in `MAP.md` and tell `map.tsv` which folder belongs to which group.
+Start a new session in any of your projects and fill the brain in with `/brain`, for example:
+
+```
+/brain I work on Invoicer (~/projects/invoicer, billing) and Scheduler (~/projects/scheduler, recurring tasks).
+Both belong to my company Northwind. Invoicer's retry logic in src/claims.js is worth copying.
+```
+
+`example-brain/` in this repo shows a filled in brain to read first. To remove everything except your brain, run `./uninstall.sh`.
+
+Needs macOS or Linux (Windows through WSL), bash, git, and jq for the automatic settings merge.
+In Claude Desktop's Cowork sessions, Claude Code skips imports outside the working folder, so the map does not load there.
 
 ## What is in the brain
 
@@ -82,6 +93,7 @@ bash test/run.sh
 
 Needs bash, jq and coreutils. CI runs it on Linux and macOS, because macOS ships bash 3.2 and BSD tools.
 Every check was confirmed to fail against a deliberately broken copy of the code it guards.
+The hook was also run in a real Claude Code session, which received the group brain it printed.
 
 ## Why not an auto memory tool
 
