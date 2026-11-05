@@ -1,0 +1,7 @@
+# folder prefix<TAB>group file in groups/
+# The longest matching prefix wins. ~ means your home folder.
+~/work/acme	acme.md
+~/projects/northwind	northwind.md
+~/projects/invoicer	northwind.md
+~/projects/scheduler	northwind.md
+~/projects/reports	northwind.md
