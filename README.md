@@ -104,10 +104,6 @@ brain and committed it; the hook then loaded the new group in the other product'
 Tools that record every session are great for "what did we do last week" in one project.
 This solves a different problem: carrying decisions and proven code across projects, with boundaries a recorder cannot keep.
 
-## Author
-
-Mesut Can, Lead Software Engineer and Software Architect. More about me and my work at [mesutcan.dev](https://mesutcan.dev).
-
 ## License
 
-MIT
+MIT © [Mesut Can](https://mesutcan.dev)
