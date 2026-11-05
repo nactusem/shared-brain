@@ -7,8 +7,8 @@ echo '{"model": "untouched"}' > "$ih/.claude/settings.json"
 
 HOME="$ih" bash "$root/install.sh" > /dev/null
 
-check "installs the example brain" \
-  "yes" "$([ -f "$ih/brain/MAP.md" ] && echo yes)"
+check "installs the empty starter brain, not the example" \
+  "1 0" "$(grep -c 'Not filled in yet' "$ih/brain/MAP.md") $(grep -c Invoicer "$ih/brain/MAP.md")"
 
 check "starts the brain as a git repo" \
   "yes" "$([ -d "$ih/brain/.git" ] && echo yes)"

@@ -1,8 +1,10 @@
 # shellcheck shell=bash
-# Sourced by test/run.sh. The example brain must follow its own rules.
+# Sourced by test/run.sh. The example and the starter brain must follow their own rules.
 
-check "the example brain is within its limits" \
-  "0" "$(bash "$root/skills/brain/check-limits.sh" "$root/example-brain" > /dev/null; echo $?)"
+for b in example-brain starter-brain; do
+  check "$b is within its limits" \
+    "0" "$(bash "$root/skills/brain/check-limits.sh" "$root/$b" > /dev/null; echo $?)"
+done
 
 check "every group in the example map has a file" \
   "" "$(grep -v '^#' "$root/example-brain/map.tsv" | cut -f2 | sort -u |
@@ -16,5 +18,5 @@ check "the example map loads Northwind inside a product folder" \
       sed -n 3p)"
 rm -rf "$eh"
 
-check "no em or en dash in the example brain" \
-  "" "$(grep -rlE $'\xe2\x80\x94|\xe2\x80\x93' "$root/example-brain" || true)"
+check "no em or en dash in either brain" \
+  "" "$(grep -rlE $'\xe2\x80\x94|\xe2\x80\x93' "$root/example-brain" "$root/starter-brain" || true)"

@@ -2,8 +2,8 @@
 # Installs shared-brain for the current user.
 # Usage: ./install.sh [brain dir]   (default: ~/brain)
 #
-# Copies the example brain, the hook and the skill, and never overwrites a
-# file that is already there. It does not edit your Claude Code settings:
+# Copies an empty starter brain, the hook and the skill, and never
+# overwrites a file that is already there. It does not edit your Claude Code settings:
 # it prints the two lines to add yourself, so you see every change.
 set -euo pipefail
 
@@ -22,7 +22,7 @@ copy() {
   echo "added  $2"
 }
 
-if copy "$here/example-brain" "$brain"; then
+if copy "$here/starter-brain" "$brain"; then
   git -C "$brain" init -q
 fi
 copy "$here/hooks/brain-context.sh" "$claude/hooks/brain-context.sh" || true
@@ -53,6 +53,6 @@ Two steps left, both by hand:
      }
    ]
 
-Then replace the example in $brain with your own projects:
+Then fill in $brain with your own projects:
 MAP.md for the catalog, map.tsv for which folder loads which group.
 EOF

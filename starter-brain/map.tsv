@@ -1,0 +1,3 @@
+# folder prefix<TAB>group file in groups/
+# The longest matching prefix wins. ~ means your home folder. For example:
+# ~/work/acme	acme.md
