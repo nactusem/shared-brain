@@ -94,7 +94,8 @@ bash test/run.sh
 
 Needs bash, jq and coreutils. CI runs it on Linux and macOS, because macOS ships bash 3.2 and BSD tools.
 Every check was confirmed to fail against a deliberately broken copy of the code it guards.
-The hook was also run in a real Claude Code session, which received the group brain it printed.
+Both halves were also run in real Claude Code sessions. `/brain` previewed its plan, waited for "ok", filled an empty
+brain and committed it; the hook then loaded the new group in the other product's folder.
 
 ## Why not an auto memory tool
 
