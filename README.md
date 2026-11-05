@@ -7,7 +7,8 @@ Claude Code forgets everything outside the folder it runs in. shared-brain lets 
 I work on five projects at the same time, a day job and a few products of my own. Every session only knew its own folder,
 so the same fixes were rebuilt in every repo and good patterns stayed where they were born.
 Now when one project solves something well, the others find it and copy it.
-This is the setup I use every day. Plain Markdown, one shell hook, one skill. No database, no server, nothing leaves your machine.
+This is the setup I use every day. Plain Markdown, one shell hook, one skill. No database, no service, no account:
+the brain is a folder of files on your machine, and Claude sees it the way it sees your CLAUDE.md.
 
 ## How it works
 
