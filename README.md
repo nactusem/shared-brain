@@ -4,10 +4,12 @@
 
 Claude Code forgets everything outside the folder it runs in. shared-brain lets it pick your whole brain.
 
-I'm [Mesut Can](https://mesutcan.dev), and I work on five projects at the same time, a day job and a few products of my own. Every session only knew its own folder,
-so the same fixes were rebuilt in every repo and good patterns stayed where they were born.
-Now when one project solves something well, the others find it and copy it.
-This is the setup I use every day. Plain Markdown, one shell hook, one skill. No database, no service, no account:
+Most of us work on more than one project: a day job, a product or two of our own, a client on the side.
+Each Claude Code session only knows its own folder, so the same fix gets rebuilt in every repo
+and a good pattern stays in the project where it was born.
+
+shared-brain gives every session one small map of all your projects. When one of them solves something well,
+the others can find it and copy it. Plain Markdown, one shell hook, one skill. No database, no service, no account:
 the brain is a folder of files on your machine, and Claude sees it the way it sees your CLAUDE.md.
 
 ## How it works
@@ -50,7 +52,7 @@ Start a new session in any of your projects and fill the brain in with `/brain`,
 
 ```
 /brain I work on Invoicer (~/projects/invoicer, billing) and Scheduler (~/projects/scheduler, recurring tasks).
-Both belong to my company Northwind. Invoicer's retry logic in src/claims.js is worth copying.
+Both belong to my company Northwind. The double charge guard in Invoicer's src/claims.js is worth copying.
 ```
 
 `example-brain/` in this repo shows a filled in brain to read first. To remove everything except your brain, run `./uninstall.sh`.
