@@ -17,4 +17,4 @@ check "the example map loads Northwind inside a product folder" \
 rm -rf "$eh"
 
 check "no em or en dash in the example brain" \
-  "" "$(grep -rl $'\xe2\x80\x94\|\xe2\x80\x93' "$root/example-brain" || true)"
+  "" "$(grep -rlE $'\xe2\x80\x94|\xe2\x80\x93' "$root/example-brain" || true)"
