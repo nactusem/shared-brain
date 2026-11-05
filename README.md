@@ -4,7 +4,7 @@
 
 Claude Code forgets everything outside the folder it runs in. shared-brain lets it pick your whole brain.
 
-I work on five projects at the same time, a day job and a few products of my own. Every session only knew its own folder,
+I'm [Mesut Can](https://mesutcan.dev), and I work on five projects at the same time, a day job and a few products of my own. Every session only knew its own folder,
 so the same fixes were rebuilt in every repo and good patterns stayed where they were born.
 Now when one project solves something well, the others find it and copy it.
 This is the setup I use every day. Plain Markdown, one shell hook, one skill. No database, no service, no account:
@@ -101,6 +101,10 @@ brain and committed it; the hook then loaded the new group in the other product'
 
 Tools that record every session are great for "what did we do last week" in one project.
 This solves a different problem: carrying decisions and proven code across projects, with boundaries a recorder cannot keep.
+
+## Author
+
+Mesut Can, Lead Software Engineer and Software Architect. More about me and my work at [mesutcan.dev](https://mesutcan.dev).
 
 ## License
 
